@@ -1,12 +1,19 @@
-name "modbus"
+name "modbusx"
 targetType "library"
 description "Modbus protocol"
-authors "Oleg Butko (deviator)"
-copyright "Copyright © 2017-2020"
+authors "Oleg Butko (deviator)" "Daniel Kozák (kozzi)"
+copyright "Copyright © 2017-2020, Copyright © 2025 Daniel Kozák (kozzi)"
 license "MIT"
+dependency "serialportx" version="~>2.3.0"
 
-targetType "library"
-dependency "serialport" version="~>2.2.3"
+configuration "library" {
+    targetType "library"
+    subConfiguration "serialportx" "library"
+}
+configuration "vibe-core" {
+    targetType "library"
+    subConfiguration "serialportx" "vibe-core"
+}
 
 //versions "modbus_verbose"
 //versions "modbus_use_prealloc_exceptions"

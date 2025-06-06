@@ -4,7 +4,7 @@ import std.conv;
 import std.datetime.stopwatch;
 import core.thread;
 
-import modbus;
+import modbusx;
 
 import aslike;
 

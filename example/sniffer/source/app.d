@@ -1,8 +1,8 @@
 import std.stdio;
 import std.getopt;
 
-import serialport;
-import modbus;
+import serialportx;
+import modbusx;
 
 class Sniffer : ModbusSlaveModel
 {
@@ -104,7 +104,7 @@ class Sniffer : ModbusSlaveModel
 
         swapSource();
     }
-    
+
 override:
     Reaction checkDeviceNumber(ulong dev)
     { return Reaction.onlyProcessMessage; }

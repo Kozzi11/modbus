@@ -1,6 +1,6 @@
 import std : to, map, array, stderr, stdout, writeln, msecs, toLower;
 
-import modbus;
+import modbusx;
 
 int usage(int code)
 {
@@ -27,7 +27,7 @@ int main(string[] args)
     }
     else if (cmd.startsWith("TCP"))
     {
-        //import modbus.connection.tcp;
+        //import modbusx.connection.tcp;
         import std.socket;
         Address ia;
         if (cmd == "TCP" || cmd.endsWith("4"))
